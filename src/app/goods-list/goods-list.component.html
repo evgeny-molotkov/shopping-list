@@ -1,0 +1,27 @@
+<h1>
+    Список товаров
+</h1>
+<div class="goods-list">
+    <div class="goods-list__item goods-item goods-list_header ">
+        <div class="item goods-item__checkbox"></div>
+        <div class="item goods-item__group">Категория</div>
+        <div class="item goods-item__name">Товар</div>
+        <div class="item goods-item__price">Цена</div>
+    </div>
+    <div *ngFor="let good of goods" class="goods-list__item goods-item">
+        <div class="item goods-item__checkbox">
+            <mat-checkbox color="primary" 
+                          [checked]="checkSelectedGood(good.id)"
+                          (change)="onChangeSelectedGood(good.id)"></mat-checkbox>
+        </div>
+        <div class="item goods-item__group">{{ good.groupName }}</div>
+        <div class="item goods-item__name">{{ good.name }}</div>
+        <div class="item goods-item__price">{{ good.price }}</div>
+    </div>
+</div>
+<div class="basket">
+    В корзине {{ basketGoodsCount }} товаров
+</div>
+<div class="button-wrapper">
+    <button mat-raised-button color="primary" (click)="addToBasket()">В корзину</button>
+</div>

@@ -1,0 +1,53 @@
+h1 {
+    text-align: center;
+}
+
+.item {
+    padding: 16px;
+    text-overflow: ellipsis;
+}
+
+.goods-list {
+    width: 100%;
+    text-align: left;
+}
+.goods-list_header {
+    font-weight: bold;
+}
+.goods-list__item {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+
+    &:hover {
+        background-color: rgba(0,0,0,.04);
+    }
+}
+.goods-item__checkbox {
+    width: 9%;
+}
+.goods-item__group {
+    width: 30%;
+}
+.goods-item__name {
+    width: 45%;
+}
+.goods-item__price {
+    width: 15%;
+    text-align: center;
+}
+
+.basket {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 18px;
+    background-color: rgba(0,0,0,.04);
+}
+
+.button-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
